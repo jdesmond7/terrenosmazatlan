@@ -1,0 +1,381 @@
+/* ===== CSS RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #222A68; /* Primary blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #1a2152; /* Darker shade for hover */
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #F75C03; /* Bright orange */
+        }
+
+        .btn-secondary:hover {
+            background-color: #e05502; /* Darker shade for hover */
+        }
+
+/* ===== HEADER / HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, rgba(34, 42, 104, 0.8), rgba(247, 92, 3, 0.6)),
+                        url('../images/hero/hero-terrenos-mazatlan-carretera-habal.png') center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: -0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ===== LAND LOT SECTIONS ===== */
+.lot-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.lot-section:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.lot-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+        .lot-text h2 {
+            font-size: 2.5rem;
+            color: #222A68;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+.lot-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+}
+
+        .lot-location {
+            background-color: #fff5f0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #F75C03;
+            margin-bottom: 2rem;
+        }
+
+        .lot-location strong {
+            color: #cc4d02;
+        }
+
+        .lot-location a {
+            display: block;
+        }
+
+        /* ===== COLOR PALETTE ===== */
+        /* Primary: #222A68 */
+        /* Light shade: #2d3878 (for cards, backgrounds) */
+        /* Dark shade: #1a2152 (for hovers, buttons) */
+        /* Accent: #F75C03 (bright orange) */
+        /* Accent hover: #e05502 (darker orange) */
+        /* Light accent: #FF8A3D (lighter orange for titles) */
+
+.lot-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== CAROUSEL STYLES ===== */
+.carousel-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 500px;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: white;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.carousel-arrow.prev {
+    left: 15px;
+}
+
+.carousel-arrow.next {
+    right: 15px;
+}
+
+
+
+/* ===== CONTACT SECTION ===== */
+        .contact {
+            background: linear-gradient(135deg, #222A68, #1a2152);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 2rem;
+}
+
+        .contact-item {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #FF8A3D;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            color: #FF8A3D;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .contact-message {
+            max-width: 100%;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+/* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 50vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.2rem;
+                line-height: 1.1;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+                margin-top: 1.5rem;
+            }
+
+            .lot-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .lot-content .lot-text {
+                order: 1;
+            }
+
+            .lot-content .carousel-container {
+                order: 2;
+            }
+
+                .lot-text h2 {
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1.1;
+            }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .lot-section {
+        padding: 60px 0;
+    }
+
+    .contact {
+        padding: 60px 0;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+
+    .carousel-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-item {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: 40vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+            }
+
+            .lot-text h2 {
+                font-size: 2.8rem;
+                font-weight: 700;
+                line-height: 1.1;
+            }
+
+            .contact h2 {
+                font-size: 1.75rem;
+            }
+        } 
