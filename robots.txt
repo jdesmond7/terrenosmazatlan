@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://terrenosmazatlan.mx/sitemap.xml 
