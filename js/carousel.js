@@ -56,9 +56,15 @@ function startAutoPlay(carouselId) {
 
 // Initialize carousels when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize carousel 1
+    // Initialize carousel 1 (mobile)
     if (document.getElementById('carousel1')) {
         initCarousel('carousel1');
         startAutoPlay('carousel1');
+    }
+    
+    // Initialize carousel 1 desktop
+    if (document.getElementById('carousel1-desktop')) {
+        initCarousel('carousel1-desktop');
+        startAutoPlay('carousel1-desktop');
     }
 }); 

@@ -99,7 +99,7 @@ img {
         .lot-text h2 {
             font-size: 2.5rem;
             color: #222A68;
-            margin-bottom: 1rem;
+            margin-bottom: 0rem;
             font-weight: 600;
         }
 
@@ -107,6 +107,10 @@ img {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: #4b5563;
+}
+
+.dimensiones-detalle {
+    margin-bottom: 0rem !important;
 }
 
         .lot-location {
@@ -145,6 +149,16 @@ img {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Carrusel para móviles - oculto en desktop */
+.mobile-carousel {
+    display: none;
+}
+
+/* Carrusel para desktop - visible en desktop */
+.desktop-carousel {
+    display: block;
 }
 
 .carousel {
@@ -302,17 +316,75 @@ img {
             }
 
             .lot-content {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
                 gap: 40px;
                 text-align: center;
             }
 
             .lot-content .lot-text {
-                order: 1;
+                order: 1 !important;
             }
 
             .lot-content .carousel-container {
-                order: 2;
+                order: 2 !important;
+            }
+
+            /* Mostrar carrusel móvil y ocultar desktop en móviles */
+            .mobile-carousel {
+                display: block !important;
+                order: 2 !important;
+                margin-bottom: 2rem;
+            }
+
+            .desktop-carousel {
+                display: none !important;
+            }
+
+            /* En móviles, el carrusel móvil aparece después del subtítulo */
+            .lot-text h2 {
+                order: 1 !important;
+            }
+
+            .lot-text p:first-of-type {
+                order: 2 !important;
+            }
+
+            .lot-text p:nth-of-type(2) {
+                order: 3 !important;
+            }
+
+            .mobile-carousel {
+                order: 4 !important;
+            }
+
+            .lot-text p:not(:first-of-type):not(:nth-of-type(2)):not(:nth-of-type(3)),
+            .lot-text ul,
+            .lot-text .lot-location,
+            .lot-text .btn {
+                order: 5 !important;
+            }
+
+            .lot-text p:nth-of-type(3) {
+                order: 4 !important;
+            }
+
+            .dimensiones-detalle {
+                order: 5 !important;
+            }
+
+            .lot-text p:nth-of-type(4) {
+                order: 6 !important;
+            }
+
+            .mobile-carousel {
+                order: 7 !important;
+            }
+
+            .lot-text p:not(:first-of-type):not(:nth-of-type(2)):not(:nth-of-type(3)):not(:nth-of-type(4)),
+            .lot-text ul,
+            .lot-text .lot-location,
+            .lot-text .btn {
+                order: 8 !important;
             }
 
                 .lot-text h2 {
@@ -378,4 +450,4 @@ img {
             .contact h2 {
                 font-size: 1.75rem;
             }
-        } 
+        }

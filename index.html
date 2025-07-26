@@ -28,7 +28,7 @@
     <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js"></script>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=1.9">
     
     <!-- JavaScript -->
     <script src="js/carousel.js"></script>
@@ -51,10 +51,14 @@
             <div class="lot-content">
                 <div class="lot-text">
                     <h2>Terreno en Carretera Habal</h2>
-                    <p style="color: #222A68; font-weight: 500; margin-bottom: 1.5rem;">Carretera Habal - Cerritos, Entronque México 15</p>
+                    <p style="color: #222A68; font-weight: 500; margin-bottom: 0.3rem;">Carretera Habal - Cerritos, Entronque México 15</p>
+                    <p style="color: #F75C03; font-weight: 700; font-size: 1.6rem; margin-bottom: 1.5rem;">MXN 30,000,000</p>
+                    
                     <p>Oportunidad única para comprar terreno en Mazatlán en una zona estratégica de alto crecimiento. Este lote residencial en Mazatlán se encuentra justo al lado del entronque con la Carretera México 15, garantizando excelente visibilidad y acceso directo. Perfecto para inversión inmobiliaria en Mazatlán, desarrollo comercial o residencial.</p>
                     
-                    <p><strong>Dimensiones:</strong> 200 metros de frente x 100 metros de fondo</p>
+                    <p class="dimensiones-detalle"><strong>Dimensiones:</strong> 200 metros de frente x 100 metros de fondo</p>
+                    
+                    <p><strong>Dimensiones Totales:</strong> <span style="color: #222A68; font-weight: 600;">30000 m² totales</span></p>
                     
                     <p><strong>Ventajas de la ubicación:</strong></p>
                     <ul style="margin-left: 20px; margin-bottom: 1.5rem; color: #4b5563;">
@@ -73,7 +77,9 @@
                     
                     <a href="#contact" class="btn btn-secondary">¡No dejes pasar esta oportunidad!</a>
                 </div>
-                <div class="carousel-container">
+                
+                <!-- Carrusel para móviles - posicionado después del subtítulo -->
+                <div class="carousel-container mobile-carousel">
                     <div class="carousel" id="carousel1">
                         <div class="carousel-slide">
                             <img src="images/terreno_1/terreno-carretera-habal-mazatlan-vista-principal.png" alt="Terreno en venta en Mazatlán - Vista principal Carretera Habal Cerritos" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-vista-principal.png', '_blank')" style="cursor: pointer;">
@@ -111,6 +117,47 @@
                         <div class="carousel-dot" onclick="goToSlide('carousel1', 6)"></div>
                     </div>
                 </div>
+                
+                <!-- Carrusel para desktop -->
+                <div class="carousel-container desktop-carousel">
+                    <div class="carousel" id="carousel1-desktop">
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-vista-principal.png" alt="Terreno en venta en Mazatlán - Vista principal Carretera Habal Cerritos" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-vista-principal.png', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-panoramica.png" alt="Terreno en venta en Mazatlán - Vista panorámica Carretera Habal" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-panoramica.png', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-vista-aerea.webp" alt="Terreno en venta en Mazatlán - Vista aérea Carretera Habal Cerritos" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-vista-aerea.webp', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-acceso-principal.webp" alt="Terreno en venta en Mazatlán - Acceso principal Carretera Habal" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-acceso-principal.webp', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-dimensiones.webp" alt="Terreno en venta en Mazatlán - Dimensiones y medidas Carretera Habal" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-dimensiones.webp', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-ubicacion-estrategica.webp" alt="Terreno en venta en Mazatlán - Ubicación estratégica Carretera Habal" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-ubicacion-estrategica.webp', '_blank')" style="cursor: pointer;">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/terreno_1/terreno-carretera-habal-mazatlan-potencial-inversion.webp" alt="Terreno en venta en Mazatlán - Potencial de inversión Carretera Habal" onclick="window.open('images/terreno_1/terreno-carretera-habal-mazatlan-potencial-inversion.webp', '_blank')" style="cursor: pointer;">
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-arrow prev" onclick="changeSlide('carousel1-desktop', -1)">‹</button>
+                    <button class="carousel-arrow next" onclick="changeSlide('carousel1-desktop', 1)">›</button>
+                    
+                    <div class="carousel-nav">
+                        <div class="carousel-dot active" onclick="goToSlide('carousel1-desktop', 0)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 1)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 2)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 3)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 4)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 5)"></div>
+                        <div class="carousel-dot" onclick="goToSlide('carousel1-desktop', 6)"></div>
+                    </div>
+                </div>
+ 
             </div>
         </div>
     </section>
