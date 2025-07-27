@@ -70,16 +70,29 @@ img {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: -2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
 .hero-content p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
+.hero-content a {
+    margin-top: 2rem;
+}
+
 /* ===== LAND LOT SECTIONS ===== */
 .lot-section {
     padding: 80px 0;
     background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .lot-section:nth-child(even) {
@@ -94,15 +107,16 @@ img {
 }
 
         .lot-text h2 {
-            font-size: 2.5rem;
+            font-size: 4rem;
+            line-height: 1;
             color: #222A68;
             margin-bottom: 0rem;
-            font-weight: 600;
+            font-weight: 800;
         }
 
 .lot-text p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #4b5563;
 }
 
